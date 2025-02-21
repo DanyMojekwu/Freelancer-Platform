@@ -27,3 +27,14 @@ mongoose.connect(process.env.MONGO_URI, {
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Freelancer platform loaded!");
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  });
+
+  document.querySelectorAll(".card").forEach((card) => observer.observe(card));
+});
