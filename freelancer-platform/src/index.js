@@ -24,3 +24,6 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 .then(() => console.log("MongoDB Connected"))
 .catch(err => console.error("MongoDB connection error:", err));
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("Freelancer platform loaded!");
+});
